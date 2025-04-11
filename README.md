@@ -1,23 +1,24 @@
 Modulate Audio Signal Processing Task
 -------------------------------------
-**Project Goal:** Recover the original audio from a modulated signal using FFT and demodulation techniques
+**Project Goal:** Recover the original audio from a modulated signal using FFT, Bandpass Filter and demodulation technique
 
 Methodology
 -----------
 
-1. Import wav file in MATLAB <br>
-2. Perform FFT Analysis to find carrier frequency <br>
-   (In our case it is 10580Hz)<br>
-3. Use bandwidth filter to isolate the modulated content<br>
-4. using absolute value to extract the amplitude variations (AM demodulation)<br>
-5. Low-Pass Filter, to remove the carrier and high-frequency noise, keeping only the baseband audio<br>
-6. Normalization of the final audio to make it clean and audible.<br>
-7. Exporting the file as demodlated_audio.wav<br>
+1. Import wav file in MATLAB using `audioread` function <br>
+2. Visualized the time-domain and frequency-domain (FFT) plot<br>
+3. Identified a strong carrier around 10.5 kHz<br>
+4. Applied bandpass filter from 9.5 kHz to 11.5 kHz (AM demodulation)<br>
+5. Used the `hilbert` transform to demodulate the AM signal (envelope detection) <br>
+6. Saved the final cleaned audio to `demodulated_audio.wav` <br>
 
 Files Submitted
 ---------------
-1. fft_analysis.jpg --> Frequency spectrum of the modulated signal <br>
-2. demodulated_audio.wav --> Final recovered/filtered audio file <br>
+1. fft_analysis.jpg <br>
+2. demodulate_plot.jpg <br>
+3. filtered_vs_noisy_signals.jpg <br>
+4. demodulated_audio.wav <br>
+5. signal_processing.m <br>
 <br>
 Prepared by: Kunal Gandvane <br>
 Date: 10th April, 2025
